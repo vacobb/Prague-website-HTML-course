@@ -1,0 +1,406 @@
+/* Vaughn Cobb | CSCI 1145 */
+
+html {
+    background: #f9ecd9;
+    color: #004e7a;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    min-height: 100vh; /* Ensures full viewport height - keeps gradient visible at all screen sizes */
+    background: linear-gradient(
+        to bottom,
+        #f9ecd9 0%,     /* Mostly beige */
+        #f9ecd9 90%,    /* Stay beige until ~90% */
+        #004e7a 100%    /* Fade into blue at bottom */
+    );
+
+    background-attachment: fixed; /* Keeps it from moving */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Hides checkbox & hamburger icon on desktop */
+.menu-checkbox,
+.hamburger {
+    display: none;
+}
+
+/* Updates nav bar to push the logo left & menu right */
+.nav-bar {
+    position: sticky;
+    background: #004e7a;
+    color: white;
+    font-family: "Arial", sans-serif;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spaces out logo & menu */
+    padding: 0 20px;
+    box-sizing: border-box; /* Prevents padding from making the bar too wide */
+}
+
+/* Lets ul take up remaining space */
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1; /* Allows links to spread out */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar li {
+    margin: 0 20px; /* Adds space between the words */
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none; /* Removes the underline */
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: cursive;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;         /* This turns on the "side-by-side" magic */
+    flex-direction: row;
+    align-items: flex-start;    /* Keeps text aligned at top of video */
+    gap: 20px;             /* Adds a nice 20px space between the image and text */
+    width: 95%;
+    max-width: 1200px; 
+    margin: 30px auto;      
+}
+
+.text-content {
+    flex: 1;               /* Tells the text to take up the remaining space */
+    text-align: justify;
+}
+
+.custom-line {
+    width: 90%;
+    height: 3px; 
+    background-color: #004e7a;
+    border-radius: 2px; /* Rounds the edges slightly */
+    margin: 20px auto;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-media-icon {
+    height: 32px;
+    width: auto;
+}
+
+table td {
+    padding: 10px;
+}
+
+table caption {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(0, 78, 122, 0.15);
+}
+
+.indent-cell {
+  padding-left: 30px; 
+}
+
+.table-container {
+  display: flex;
+  gap: 20px; 
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    color: #004e7a;
+    border: 4px solid #004e7a;
+    padding: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /** Stacks label above input **/
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/** Makes ALL inputs consistent **/
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #004e7a;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/** Nicer textarea behavior **/
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #004e7a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #003355;
+}
+
+#translation-top {
+    margin-bottom: 0;
+}
+
+#translation-bottom {
+    margin-top: 0;
+}
+
+#instructions {
+    text-align: center;
+    margin: 0 auto;
+    width: 60vw;
+}
+
+
+
+
+/* Gallery layout */
+.gallery {
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+}
+
+.gallery-item {
+    display: inline-block; /* Allows items to sit side-by-side as a gallery */
+    text-align: center;    /* Centers the text under the image */
+
+    vertical-align: top;   /* Keeps top edges aligned */
+}
+
+.gallery-item img {
+    display: block;        /* Forces the image to be on its own line above the text */
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;   /* Crops image to fill box */
+    border-radius: 8px; 
+    cursor: pointer;
+}
+
+/* Lightbox background */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Show when clicked */
+.lightbox:target {
+    display: flex;
+}
+
+/* Popup box */
+.lightbox-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Image */
+.lightbox-content img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* Text */
+.lightbox-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Tablet styles (applies only to screens 1024px or smaller) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px;
+
+        /* Allows nav bar to wrap content to a new line */
+        .nav-bar {
+            flex-wrap: wrap;
+        }
+
+        /* Shows the hamburger icon */
+        .hamburger {
+            display: block;
+            font-size: 2rem;
+            cursor: pointer;
+            user-select: none; /* Prevents blue highlighting when tapped */
+        }
+
+        /* Hides menu list by default on mobile */
+        .nav-bar ul {
+            display: none; /* Hides menu */
+            flex-direction: column;
+            width: 100%; /* Forces menu to drop below logo */
+            padding-bottom: 20px;
+            flex-basis: 100%;
+        }
+
+        .nav-bar li {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        /* When hidden checkbox is checked, shows menu */
+        .menu-checkbox:checked ~ ul {
+            display: flex;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 16px;
+        }
+
+        /* Makes form take up more horizontal space on a small screen */
+        form {
+            width: 95%;
+            padding: 15px;
+        }
+    }
+}
+
+/* Mobile styles (applies only to screens 768px or smaller) */
+@media (max-width: 768px) {
+
+    /* Allows nav bar to wrap content to a new line */
+    .nav-bar {
+        flex-wrap: wrap;
+    }
+
+    /* Shows the hamburger icon */
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        user-select: none; /* Prevents blue highlighting when tapped */
+    }
+
+    /* Hides menu list by default on mobile */
+    .nav-bar ul {
+        display: none; /* Hides menu */
+        flex-direction: column;
+        width: 100%; /* Forces menu to drop below logo */
+        padding-bottom: 20px;
+    }
+
+    .nav-bar li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* When hidden checkbox is checked, shows menu */
+    .menu-checkbox:checked ~ ul {
+        display: flex;
+    }
+    
+    /* Stacks nav links vertically */
+    .nav-bar ul {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-bar li {
+        margin: 10px 0;
+    }
+
+
+    /* Stacks popup images and text vertically */
+    .lightbox-content {
+        flex-direction: column;
+        overflow-y: auto; /* Allows scrolling if content gets too long for phone screen */
+        max-height: 90vh; /* Prevents popup from overflowing on screen */
+        margin-top: 40px; /* Makes room for close button */
+    }
+
+    /* Makes image and text take up full width of popup */
+    .lightbox-content img,
+    .lightbox-text {
+        width: 100%;
+    }
+
+    /* Fixes other layout containers from other pages */
+    .main-container,
+    .table-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Makes form take up more horizontal space on a small screen */
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+}

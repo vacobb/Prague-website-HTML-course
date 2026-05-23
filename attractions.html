@@ -1,0 +1,142 @@
+<!-- Vaughn Cobb | CSCI 1145 | 16-Apr-26 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Prague! - Attractions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Vaughn Cobb">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <a href="home.html" class="logo">
+                <img src="images/website-logo.png" alt="home">
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <ul>
+                <li><a href="attractions.html">ATTRACTIONS</a></li>
+                <li><a href="food.html">FOOD</a></li>
+                <li><a href="lodging.html">LODGING</a></li>
+                <li><a href="transportation.html">TRANSPORTATION</a></li>
+                <li><a href="phrasebook.html">PHRASE BOOK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+        <h1>Attractions</h1>
+
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="#img1"><img src="images/staromak.jpg" alt="Old Town Square"></a>
+                <p>Old Town Square</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="#img2"><img src="images/orloj.jpg" alt="Astronomical Clock"></a>
+                <p>Astronomical Clock</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="#img3"><img src="images/prazsky_hrad.jpeg" alt="Prague Castle"></a>
+                <p>Prague Castle</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="#img4"><img src="images/petrin.jpg" alt="Petřín"></a>
+                <p>Petřín</p>
+            </div>
+
+            <div class="gallery-item">
+                <a href="#img5"><img src="images/zizkov.jpg" alt="Žižkov Television Tower"></a>
+                <p>Žižkov TV Tower</p>
+            </div>
+        </div>
+
+        <!-- Popups -->
+        <div id="img1" class="lightbox">
+            <div class="lightbox-content">
+                <a href="#" class="close">&times;</a>
+
+                <img src="images/staromak.jpg" alt="Old Town Square">
+
+                <div class="lightbox-text">
+                    <h3 id="translation-top">Old Town Square</h3>
+                    <h3 id="translation-bottom">(<i>Staroměstské náměstí</i>)</h3>
+                    <p>This square is home to a variety of architechtural styles. It is the heart of the city, centrally located and well connected to everything you could need.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="img2" class="lightbox">
+            <div class="lightbox-content">
+                <a href="#" class="close">&times;</a>
+
+                <img src="images/orloj.jpg" alt="Astronomical Clock">
+
+                <div class="lightbox-text">
+                    <h3 id="translation-top">Astronomical Clock</h3>
+                    <h3 id="translation-bottom">(<i>Orloj</i>)</h3>
+                    <p>Built in 1490 by Jan Růže, this medieval astronomical clock is attached to the Old Town Hall in Prague. It is the centerpiece of the Old Town Square.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="img3" class="lightbox">
+            <div class="lightbox-content">
+                <a href="#" class="close">&times;</a>
+
+                <img src="images/prazsky_hrad.jpeg" alt="Prague Castle">
+
+                <div class="lightbox-text">
+                    <h3 id="translation-top">Prague Castle</h3>
+                    <h3 id="translation-bottom">(<i>Pražský hrad</i>)</h3>
+                    <p>At about 70,000 square meters, this is the largest castle complex in the world and the home of Czechia's president. This castle sits high on a hill overlooking the vast city of Prague.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="img4" class="lightbox">
+            <div class="lightbox-content">
+                <a href="#" class="close">&times;</a>
+
+                <img src="images/petrin.jpg" alt="Petřín">
+
+                <div class="lightbox-text">
+                    <h3>Petřín</h3>
+                    <p>From the tower at the top of the hill you will have access to some of the most scenic views of the city and Vltava River below.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="img5" class="lightbox">
+            <div class="lightbox-content">
+                <a href="#" class="close">&times;</a>
+
+                <img src="images/zizkov.jpg" alt="Žižkov TV Tower">
+
+                <div class="lightbox-text">
+                    <h3 id="translation-top">Žižkov Television Tower</h3>
+                    <h3 id="translation-bottom">(<i>Žižkovský vysílač</i>)</h3>
+                    <p>One of the highest points in the city, the views here are unmatched. And if sights of the city aren't your thing, many people come to see the babies crawling all over this tower. </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <footer>
+        <div class="custom-line"></div>
+        <div class="social-links">
+            <a href="https://instagram.com/cityofprague" target="_blank">
+                <img src="images/ig-logo.png" alt="Instagram" class="social-media-icon"></a>
+            <a href="https://twitter.com/PragueEU" target="_blank">
+                <img src="images/x-logo.png" alt="X (Twitter)" class="social-media-icon"></a>
+            <a href="https://www.facebook.com/prague.eu" target="_blank">
+                <img src="images/fb-logo.png" alt="Facebook" class="social-media-icon"></a>
+        </div>
+    </footer>
+</html>

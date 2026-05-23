@@ -1,0 +1,80 @@
+<!-- Vaughn Cobb | CSCI 1145 | 16-Apr-26 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Prague! - Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Vaughn Cobb">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <a href="home.html" class="logo">
+                <img src="images/website-logo.png" alt="home">
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <ul>
+                <li><a href="attractions.html">ATTRACTIONS</a></li>
+                <li><a href="food.html">FOOD</a></li>
+                <li><a href="lodging.html">LODGING</a></li>
+                <li><a href="transportation.html">TRANSPORTATION</a></li>
+                <li><a href="phrasebook.html">PHRASE BOOK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <h1>Contact Us</h1>
+
+        <p id="instructions">Do you have a place you'd like to see featured on our website? Fill out the form below to let us know about it and we may include it in a later version of our site.</p>
+        <br>
+        <br>
+        <form>
+            <fieldset>
+                <legend>Send us your suggestions</legend>
+                <label for="fname">First Name:</label> 
+                    <input type="text" id="fname" name="user_first_name"/>
+                <br>
+                <br>
+                <label for="lname">Last Name:</label> 
+                    <input type="text" id="lname" name="user_last_name"/>
+                <br>
+                <br>
+                <label for="email">Email:</label> 
+                    <input type="email" id="email" name="user_email"/>
+                <br>
+                <br>
+                <label for="attr_name">Name of attraction:</label> 
+                    <input type="text" id="attr_name" name="name_of_attraction"/>
+                <br>
+                <br>
+                <label for="address">Address:</label> 
+                    <input type="text" id="address" name="address"/>
+                <br>
+                <br>
+                <label for="explanation">Explanation:</label>
+                    <textarea id="explanation" name="explanation" rows="5" cols="33" placeholder="Tell us why you like this place."></textarea>
+                <br>
+                <br>
+                        <button type="submit">Submit</button>
+                <br>
+                <br>
+            </fieldset>
+        </form>
+
+    </body>
+    <footer>
+        <div class="custom-line"></div>
+        <div class="social-links">
+            <a href="https://instagram.com/cityofprague" target="_blank">
+                <img src="images/ig-logo.png" alt="Instagram" class="social-media-icon"></a>
+            <a href="https://twitter.com/PragueEU" target="_blank">
+                <img src="images/x-logo.png" alt="X (Twitter)" class="social-media-icon"></a>
+            <a href="https://www.facebook.com/prague.eu" target="_blank">
+                <img src="images/fb-logo.png" alt="Facebook" class="social-media-icon"></a>
+        </div>
+    </footer>
+</html>
